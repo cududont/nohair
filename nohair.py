@@ -12,7 +12,7 @@ def show():
     scrnwidth = root.winfo_screenwidth()
     scrnheight = root.winfo_screenheight()
     sw = scrnwidth - 27
-    sh = scrnheight - 45
+    sh = scrnheight - 35
     dsw = str(int(sw / 2))
     dsh = str(int(sh / 2))
     label = Label(root, text="+", font=('Arial','25'), fg='red', bg='black')
