@@ -4,7 +4,7 @@ from threading import Thread
 
 def show():
     global label, root
-    print("On")
+    print("Crosshair On")
     root = Tk()
     sw = root.winfo_screenwidth()
     sh = root.winfo_screenheight()
@@ -16,14 +16,15 @@ def show():
     label.master.wm_attributes("-topmost", True)
     label.master.wm_attributes("-disabled", True)
     label.master.wm_attributes("-transparentcolor", "white")
-    label.pack()
     label.master.geometry("+"+dsw+"+"+dsh)
+    label.pack()
     root.mainloop()
 
 
 def remove():
-    print("Off")
+    print("Crosshair Off")
     label.destroy()
+    root.withdraw()
     
     
 
@@ -37,6 +38,3 @@ def released(key):
 
 with Listener(on_release=released) as listener:
     listener.join()
-
-
-
