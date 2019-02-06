@@ -9,16 +9,18 @@ def show():
     global label, root
     print("Crosshair On")
     root = Tk()
-    sw = root.winfo_screenwidth()
-    sh = root.winfo_screenheight()
+    scrnwidth = root.winfo_screenwidth()
+    scrnheight = root.winfo_screenheight()
+    sw = scrnwidth - 27
+    sh = scrnheight - 45
     dsw = str(int(sw / 2))
     dsh = str(int(sh / 2))
-    label = Label(root, text="+", font=('Arial','30'), fg='black', bg='white')
+    label = Label(root, text="+", font=('Arial','25'), fg='red', bg='black')
     label.master.overrideredirect(True)
     label.master.lift()
     label.master.wm_attributes("-topmost", True)
     label.master.wm_attributes("-disabled", True)
-    label.master.wm_attributes("-transparentcolor", "white")
+    label.master.wm_attributes("-transparentcolor", "black")
     label.master.geometry("+"+dsw+"+"+dsh)
     label.pack()
     root.mainloop()
