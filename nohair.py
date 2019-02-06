@@ -2,6 +2,9 @@ from tkinter import*
 from pynput.keyboard import Key, Listener
 from threading import Thread
 
+print("Nohair has launched succesfully. V1.0")
+print("Use the Up and Down arrow to disable and enable the crosshair.")
+
 def show():
     global label, root
     print("Crosshair On")
@@ -10,7 +13,7 @@ def show():
     sh = root.winfo_screenheight()
     dsw = str(int(sw / 2))
     dsh = str(int(sh / 2))
-    label = Label(root, text="Test", font=('Arial','30'), fg='black', bg='white')
+    label = Label(root, text="+", font=('Arial','30'), fg='black', bg='white')
     label.master.overrideredirect(True)
     label.master.lift()
     label.master.wm_attributes("-topmost", True)
