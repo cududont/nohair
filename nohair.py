@@ -11,11 +11,11 @@ def show():
     root = Tk()
     scrnwidth = root.winfo_screenwidth()
     scrnheight = root.winfo_screenheight()
-    sw = scrnwidth - 27
-    sh = scrnheight - 35
+    sw = scrnwidth - 22
+    sh = scrnheight - 60
     dsw = str(int(sw / 2))
     dsh = str(int(sh / 2))
-    label = Label(root, text="+", font=('Arial','25'), fg='red', bg='black')
+    label = Label(root, text="+", font=('Arial','20'), fg='red', bg='black')
     label.master.overrideredirect(True)
     label.master.lift()
     label.master.wm_attributes("-topmost", True)
