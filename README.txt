@@ -7,6 +7,7 @@ Requirements for running the Python script:
 -Python 3.7 or above
 -Pynput (pip install pynput)
 -Threading (pip install threading)
+-Pyautogui (pip install pyautogui)
 
 Thank you for using nohair!
 
